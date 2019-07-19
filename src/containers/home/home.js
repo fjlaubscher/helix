@@ -10,7 +10,7 @@ const Home = () => (
       <div className={styles.column}>
         <h1 className={styles.heading}>What is Helix?</h1>
         <p className={styles.text}>
-          <span className={styles.keyword}>Helix</span> is an opionionated{' '}
+          <span className={styles.keyword}>Helix</span> is an opinionated{' '}
           <span className={styles.keyword}>React</span> boilerplate which tries
           to keep config to a minimum while allowing you to configure whatever
           you need.

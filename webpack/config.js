@@ -3,6 +3,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const autoprefixer = require('autoprefixer');
+const Dotenv = require('dotenv-webpack');
 const path = require('path');
 
 const buildPath = path.join(__dirname, '..', 'build');
@@ -53,6 +54,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new Dotenv(),
     new CopyWebpackPlugin([{ from: assetsPath, to: buildPath }]),
     new HtmlWebPackPlugin({
       template: './src/index.html'
