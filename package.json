@@ -65,5 +65,8 @@
     "eslint-plugin-react": "^7.14.2",
     "prettier": "^1.18.2",
     "webpack-dev-server": "^3.7.2"
+  },
+  "reactSnap": {
+    "publicPath": "/helix/"
   }
 }
