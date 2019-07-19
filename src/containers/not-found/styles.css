@@ -1,0 +1,13 @@
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notFound h1 {
+  color: var(--primary);
+}
+
+.image {
+  height: 300px;
+}

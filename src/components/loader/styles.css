@@ -1,0 +1,17 @@
+.logo {
+  width: 100%;
+  transform: rotate(0);
+}
+
+.animating {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

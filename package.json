@@ -1,0 +1,68 @@
+{
+  "name": "helix",
+  "version": "0.1.0",
+  "description": "PWA react boilerplate",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --progress --config webpack/dev.config.js",
+    "prebuild": "npm run clean",
+    "build": "webpack --mode production --config webpack/config.js",
+    "postbuild": "react-snap",
+    "clean": "rimraf build",
+    "lint": "eslint -c .eslintrc src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fjlaubscher/helix.git"
+  },
+  "keywords": [
+    "React",
+    "PWA",
+    "react-snap"
+  ],
+  "author": "Francois Laubscher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fjlaubscher/helix/issues"
+  },
+  "homepage": "https://github.com/fjlaubscher/helix#readme",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-github-btn": "^1.0.5",
+    "react-helmet": "^5.2.1",
+    "react-router-dom": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@svgr/webpack": "^4.3.2",
+    "autoprefixer": "^9.6.1",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.0.3",
+    "css-loader": "^3.1.0",
+    "dotenv": "^8.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "file-loader": "^4.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2",
+    "workbox-webpack-plugin": "^4.3.1"
+  }
+}

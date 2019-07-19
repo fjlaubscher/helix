@@ -1,0 +1,37 @@
+{
+	"parser": "babel-eslint",
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"extends": [
+		"airbnb",
+		"prettier/react"
+	],
+	"globals": {
+		"Atomics": "readonly",
+		"SharedArrayBuffer": "readonly"
+	},
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 2018,
+		"sourceType": "module"
+	},
+	"plugins": [
+		"prettier",
+		"react"
+	],
+	"rules": {
+		"global-require": "off",
+		"comma-dangle": "off",
+		"arrow-parens": "off",
+    "implicit-arrow-linebreak": "off",
+    "react/jsx-filename-extension": "off",
+    "operator-linebreak": "off",
+		"prettier/prettier": [
+			"error"
+		]
+	}
+}

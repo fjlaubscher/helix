@@ -1,0 +1,29 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0 1rem;
+  background: var(--primary);
+  border-bottom: 4px solid var(--primary-dark);
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 0.5rem;
+  transform: rotate(45deg);
+}
+
+.logoText {
+  letter-spacing: 4px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
