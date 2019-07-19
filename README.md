@@ -81,3 +81,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the code of conduc
 # License
 
 Helix is free software, and may be redistributed under the terms specified in the [LICENSE](LICENSE.md) file.
+
+
+If you prefer using Styled Components over CSS modules, have a look at [Carbon](https://github.com/leadhomesa/carbon).<br />
+It is a very similar boilerplate which I've developed for our React front-ends at [Leadhome](https://leadhome.co.za).
