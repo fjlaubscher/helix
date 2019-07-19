@@ -39,9 +39,45 @@ If you don't want any of these features, simply exclude them from your `.env` fi
 - `NODE_ENV` enables the Service Worker and allows you to skip installing devDependencies.
 - `VERSION` allows you to visit `/health` in your React app to view the current version number.
 
-
-## npm
+## Installing dependencies
+`Helix` works with either `npm` or `yarn`.
 ```
 npm install
 ```
+or
+```
+yarn install
+```
 
+## Development
+This command starts up the `webpack-dev-server` and by default runs at `http://localhost:3000`.
+```
+npm start
+```
+or
+```
+yarn start
+```
+
+## Production
+Preferably set `NODE_ENV` to `production` here if you're building for production. <br />
+Once your app has been built, `react-snap` will automatically start up and pre-render HTML of your app.
+```
+npm run build
+```
+or
+```
+yarn build
+```
+
+# Contributors
+
+- <strong>Owner/Maintainer</strong> - [fjlaubscher](https://github.com/fjlaubscher)
+
+# Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the code of conduct, and the process for submitting pull requests.
+
+# License
+
+Helix is free software, and may be redistributed under the terms specified in the [LICENSE](LICENSE.md) file.

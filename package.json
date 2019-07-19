@@ -25,7 +25,6 @@
   "bugs": {
     "url": "https://github.com/fjlaubscher/helix/issues"
   },
-  "homepage": "https://github.com/fjlaubscher/helix#readme",
   "dependencies": {
     "@babel/core": "^7.5.5",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
