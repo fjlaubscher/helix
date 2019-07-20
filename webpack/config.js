@@ -2,6 +2,7 @@ require('dotenv').config();
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const autoprefixer = require('autoprefixer');
 const Dotenv = require('dotenv-webpack');
 const path = require('path');
@@ -34,7 +35,12 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'style-loader',
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV !== 'production'
+            }
+          },
           {
             loader: 'css-loader',
             options: {
@@ -55,6 +61,10 @@ module.exports = {
   },
   plugins: [
     new Dotenv(),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css'
+    }),
     new CopyWebpackPlugin([{ from: assetsPath, to: buildPath }]),
     new HtmlWebPackPlugin({
       template: './src/index.html'
