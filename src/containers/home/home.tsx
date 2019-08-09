@@ -39,7 +39,7 @@ const Home = () => (
           </li>
           <li>
             <span role="img" aria-label="typescript">
-              👨‍💻 ️
+              👨‍💻
             </span>
             TypeScript
           </li>
@@ -58,7 +58,7 @@ const Home = () => (
           <li>
             <span role="img" aria-label="fast">
               🏎
-            </span>{' '}
+            </span>
             Pre-render HTML using react-snap
           </li>
         </ul>
