@@ -85,12 +85,12 @@ const Home = () => (
     <div className={styles.info}>
       <h1>
         Get started by editing{' '}
-        <span className={styles.code}>src/containers/home/home.js</span>
+        <span className={styles.code}>src/containers/home/home.tsx</span>
       </h1>
       <h2>
         To see how code splitting is done with{' '}
-        <span className={styles.code}>React.lazy</span> go look at
-        <span className={styles.code}>src/containers/home/index.js</span>
+        <span className={styles.code}>React.lazy</span> go look at{' '}
+        <span className={styles.code}>src/containers/home/index.tsx</span>
       </h2>
     </div>
     <Loader className={styles.loader} />

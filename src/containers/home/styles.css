@@ -72,3 +72,14 @@
     justify-self: center;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .grid {
+    background-color: var(--tundora);
+    color: var(--alabaster);
+  }
+
+  .code {
+    background-color: var(--tundora);
+  }
+}
