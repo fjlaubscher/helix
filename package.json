@@ -9,7 +9,7 @@
     "build": "webpack --mode production --config webpack/config.js",
     "postbuild": "react-snap",
     "clean": "rimraf build",
-    "lint": "eslint -c .eslintrc src"
+    "lint": "eslint src --ext .tsx,.ts"
   },
   "repository": {
     "type": "git",

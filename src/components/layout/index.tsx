@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 
 // components
 import Nav from '../nav';
@@ -6,7 +6,7 @@ import Nav from '../nav';
 import styles from './styles.css';
 
 interface Props {
-  children: ReactNode
+  children: React.ReactNode;
 }
 
 const Layout = ({ children }: Props) => (

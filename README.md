@@ -71,6 +71,17 @@ or
 yarn build
 ```
 
+## ESlint not doing much in VSCode?
+Add this to your `settings.json` in VSCode.
+```
+"eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+]
+```
+
 # Contributors
 
 - <strong>Owner/Maintainer</strong> - [fjlaubscher](https://github.com/fjlaubscher)

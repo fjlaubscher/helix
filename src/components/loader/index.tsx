@@ -6,7 +6,7 @@ import { ReactComponent as Logo } from '../nav/logo.svg';
 import styles from './styles.css';
 
 interface Props {
-  className?: String
+  className?: string;
 }
 
 const Loader = ({ className }: Props) => (
