@@ -34,6 +34,7 @@
   --primary-light: #fdf4ec;
   --alabaster: #fafafa;
   --mineshaft: #383838;
+  --tundora: #404040;
 }
 
 * {
@@ -44,6 +45,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Lato', sans-serif;
+  background-color: white;
   color: var(--mineshaft);
 }
 
@@ -60,6 +62,13 @@ svg {
 @media (min-width: 1280px) {
   .styles__container--mFDL5 {
     padding: 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--mineshaft);
+    color: var(--alabaster);
   }
 }
 
@@ -164,6 +173,17 @@ svg {
 
   .styles__column--_jI4u {
     justify-self: center;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .styles__grid--1agHe {
+    background-color: var(--tundora);
+    color: var(--alabaster);
+  }
+
+  .styles__code--Dzzmp {
+    background-color: var(--tundora);
   }
 }
 
