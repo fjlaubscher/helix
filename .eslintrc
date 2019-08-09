@@ -22,7 +22,6 @@
     "operator-linebreak": "off",
     "prettier/prettier": [
       "error"
-    ],
-    "import/no-unresolved": "off"
+    ]
   }
 }
