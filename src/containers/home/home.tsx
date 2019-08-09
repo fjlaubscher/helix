@@ -38,6 +38,12 @@ const Home = () => (
             Code Splitting using React.lazy
           </li>
           <li>
+            <span role="img" aria-label="typescript">
+              👨‍💻 ️
+            </span>
+            TypeScript
+          </li>
+          <li>
             <span role="img" aria-label="css modules">
               📚
             </span>

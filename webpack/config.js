@@ -17,12 +17,20 @@ module.exports = {
     path: buildPath,
     filename: '[name].bundle.js'
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js']
+  },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.ts(x?)$/,
         exclude: /node_modules/,
         use: ['ts-loader']
+      },
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: 'source-map-loader'
       },
       {
         test: /\.(png|jpg|gif)$/,

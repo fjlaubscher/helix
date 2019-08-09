@@ -4,7 +4,7 @@
     "module": "commonjs",
     "jsx": "react",
     "sourceMap": true,
-    "outDir": "./build",
+    "outDir": "build",
     "strict": true,
     "noImplicitAny": true,
     "esModuleInterop": true
