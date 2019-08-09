@@ -1,20 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { ReactNode } from 'react';
 
 // components
 import Nav from '../nav';
 
 import styles from './styles.css';
 
-const Layout = ({ children }) => (
+interface Props {
+  children: ReactNode
+}
+
+const Layout = ({ children }: Props) => (
   <>
     <Nav />
     <main className={styles.container}>{children}</main>
   </>
 );
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired
-};
 
 export default Layout;

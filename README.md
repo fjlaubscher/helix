@@ -9,6 +9,7 @@
 - ⚙️ Minimal and accessible config
 - ♻️ HMR (Hot Module Replacement) with Webpack 4
 - 🤸‍ Code Splitting with `React.lazy`
+- 👨‍💻️ TypeScript
 - 📚 CSS Modules
 - 📱 PWA ready
 - 🏎 Pre-render HTML using `react-snap`
@@ -83,5 +84,5 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the code of conduc
 Helix is free software, and may be redistributed under the terms specified in the [LICENSE](LICENSE.md) file.
 
 
-If you prefer using Styled Components over CSS modules, have a look at [Carbon](https://github.com/leadhomesa/carbon).<br />
+If you prefer using JavaScript / Styled Components over TypeScript / CSS modules, have a look at [Carbon](https://github.com/leadhomesa/carbon).<br />
 It is a very similar boilerplate which I've developed for our React front-ends at [Leadhome](https://leadhome.co.za).
