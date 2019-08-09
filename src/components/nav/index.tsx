@@ -15,7 +15,7 @@ const Nav = () => (
     <GitHubButton
       href="https://github.com/fjlaubscher/helix"
       data-size="large"
-      data-show-count="true"
+      data-show-count
       aria-label="Star fjlaubscher/helix on GitHub"
     >
       Star

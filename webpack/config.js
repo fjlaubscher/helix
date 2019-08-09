@@ -12,7 +12,7 @@ const assetsPath = path.join(__dirname, '..', 'src', 'assets');
 
 module.exports = {
   devtool: 'source-map',
-  entry: './src/index.js',
+  entry: './src/index.tsx',
   output: {
     path: buildPath,
     filename: '[name].bundle.js'
@@ -20,9 +20,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: ['ts-loader']
       },
       {
         test: /\.(png|jpg|gif)$/,

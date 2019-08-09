@@ -22,31 +22,31 @@ const Home = () => (
           <li>
             <span role="img" aria-label="config">
               ⚙️
-            </span>{' '}
+            </span>
             Minimal and accessible config
           </li>
           <li>
             <span role="img" aria-label="hmr">
               ♻️
-            </span>{' '}
+            </span>
             HMR (Hot Module Replacement)
           </li>
           <li>
             <span role="img" aria-label="code splitting">
               🤸‍♀️
-            </span>{' '}
+            </span>
             Code Splitting using React.lazy
           </li>
           <li>
             <span role="img" aria-label="css modules">
               📚
-            </span>{' '}
+            </span>
             CSS Modules
           </li>
           <li>
             <span role="img" aria-label="pwa">
               📱
-            </span>{' '}
+            </span>
             PWA ready
           </li>
           <li>
