@@ -7,6 +7,7 @@ const autoprefixer = require('autoprefixer');
 const Dotenv = require('dotenv-webpack');
 const path = require('path');
 
+const publicPath = process.env.PUBLIC_URL || '/';
 const buildPath = path.join(__dirname, '..', 'build');
 const assetsPath = path.join(__dirname, '..', 'src', 'assets');
 
@@ -75,7 +76,8 @@ module.exports = {
     }),
     new CopyWebpackPlugin([{ from: assetsPath, to: buildPath }]),
     new HtmlWebPackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
+      publicPath
     }),
     new WorkboxPlugin.GenerateSW({
       swDest: 'sw.js',
