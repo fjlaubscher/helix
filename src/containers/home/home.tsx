@@ -55,12 +55,6 @@ const Home = () => (
             </span>
             PWA ready
           </li>
-          <li>
-            <span role="img" aria-label="fast">
-              🏎
-            </span>
-            Pre-render HTML using react-snap
-          </li>
         </ul>
       </div>
       <div className={styles.column}>

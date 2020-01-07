@@ -12,7 +12,6 @@
 - 👨‍💻️ TypeScript
 - 📚 CSS Modules
 - 📱 PWA ready
-- 🏎 Pre-render HTML using `react-snap`
 
 ## Why Helix and not create-react-app?
 
@@ -36,7 +35,7 @@ cp sample.env .env
 None of these variables are required.<br />
 If you don't want any of these features, simply exclude them from your `.env` file.<br />
 - `PORT` allows you to run the webpack dev server on a specific port. If unset, the default port is 3000.
-- `PUBLIC_URL` allows you to bundle the app if you're hosting it on a subroute.<br />Something like `https://yourwebsite.com/helix/` is a perfect case here. **Always** leave a trailing slash when setting this variable.<br />If you end up changing this remember to change the `publicPath` variable in the `package.json` file.
+- `PUBLIC_URL` allows you to bundle the app if you're hosting it on a subroute.<br />Something like `https://yourwebsite.com/helix/` is a perfect case here. **Always** leave a trailing slash when setting this variable.<br />
 - `NODE_ENV` enables the Service Worker and allows you to skip installing devDependencies.
 - `VERSION` allows you to visit `/health` in your React app to view the current version number.
 
@@ -62,7 +61,6 @@ yarn start
 
 ## Production
 Preferably set `NODE_ENV` to `production` here if you're building for production. <br />
-Once your app has been built, `react-snap` will automatically start up and pre-render HTML of your app.
 ```
 npm run build
 ```
