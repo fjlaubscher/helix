@@ -11,35 +11,37 @@ const publicPath = process.env.PUBLIC_URL || '/';
 const buildPath = path.join(__dirname, '..', 'build');
 const assetsPath = path.join(__dirname, '..', 'src', 'assets');
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 module.exports = {
   devtool: 'source-map',
   entry: './src/index.tsx',
   output: {
     path: buildPath,
-    filename: '[name].bundle.js'
+    filename: '[name].bundle.js',
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: ['.ts', '.tsx', '.js'],
   },
   module: {
     rules: [
       {
         test: /\.ts(x?)$/,
         exclude: /node_modules/,
-        use: ['ts-loader']
+        use: ['ts-loader'],
       },
       {
         enforce: 'pre',
         test: /\.js$/,
-        loader: 'source-map-loader'
+        loader: 'source-map-loader',
       },
       {
         test: /\.(png|jpg|gif)$/,
-        use: ['file-loader']
+        use: ['file-loader'],
       },
       {
         test: /\.svg$/,
-        use: ['@svgr/webpack', 'file-loader']
+        use: ['@svgr/webpack', 'file-loader'],
       },
       {
         test: /\.css$/,
@@ -47,42 +49,43 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              hmr: process.env.NODE_ENV !== 'production'
-            }
+              hmr: !isProduction,
+            },
           },
           {
             loader: 'css-loader',
             options: {
               modules: {
-                localIdentName: '[name]__[local]--[hash:base64:5]'
-              }
-            }
+                localIdentName: '[name]__[local]--[hash:base64:5]',
+              },
+            },
           },
           {
             loader: 'postcss-loader',
             options: {
-              plugins: () => [autoprefixer()]
-            }
-          }
-        ]
-      }
-    ]
+              plugins: () => [autoprefixer()],
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new Dotenv(),
     new MiniCssExtractPlugin({
       filename: '[name].css',
-      chunkFilename: '[id].css'
+      chunkFilename: '[id].css',
     }),
     new CopyWebpackPlugin([{ from: assetsPath, to: buildPath }]),
     new HtmlWebPackPlugin({
       template: './src/index.html',
-      publicPath
+      publicPath,
     }),
-    new WorkboxPlugin.GenerateSW({
-      swDest: 'sw.js',
-      clientsClaim: true,
-      skipWaiting: true
-    })
-  ]
+    isProduction &&
+      new WorkboxPlugin.GenerateSW({
+        swDest: 'sw.js',
+        clientsClaim: true,
+        skipWaiting: true,
+      }),
+  ].filter((p) => p !== false),
 };
