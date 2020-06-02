@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import { ReactComponent as NotFoundSVG } from './404.svg';
 
-import styles from './styles.css';
+import styles from './styles.scss';
 
 const NotFound = () => (
   <div className={styles.notFound}>

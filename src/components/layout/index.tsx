@@ -3,7 +3,7 @@ import React from 'react';
 // components
 import Nav from '../nav';
 
-import styles from './styles.css';
+import styles from './styles.scss';
 
 interface Props {
   children: React.ReactNode;

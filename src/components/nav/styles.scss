@@ -1,11 +1,13 @@
+@use "../../styles/colors" as colors;
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 64px;
   padding: 0 1rem;
-  background: var(--primary);
-  border-bottom: 4px solid var(--primary-dark);
+  background: colors.$primary;
+  border-bottom: 4px solid colors.$primary-dark;
 }
 
 .logoLink {

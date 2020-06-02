@@ -1,3 +1,5 @@
+@use "../../styles/colors" as colors;
+
 .notFound {
   display: flex;
   flex-direction: column;
@@ -5,7 +7,7 @@
 }
 
 .notFound h1 {
-  color: var(--primary);
+  color: colors.$primary;
 }
 
 .image {

@@ -4,7 +4,7 @@ import GitHubButton from 'react-github-btn';
 
 import { ReactComponent as Logo } from './logo.svg';
 
-import styles from './styles.css';
+import styles from './styles.scss';
 
 const Nav = () => (
   <nav className={styles.nav}>
