@@ -10,7 +10,7 @@
 - ♻️ HMR (Hot Module Replacement) with Webpack 4
 - 🤸‍ Code Splitting with `React.lazy`
 - 👨‍💻️ TypeScript
-- 📚 CSS Modules
+- 📚 SCSS
 - 📱 PWA ready
 
 ## Why Helix and not create-react-app?
@@ -21,7 +21,7 @@ niche, allowing power-users to tweak anything to their needs while
 providing a simple and clean foundation.
 <br />
 <br />
-Don&apos;t like CSS modules and want something else?
+Don&apos;t like SCSS and want something else?
 <br />
 <strong>You can change it.</strong>
 
@@ -69,17 +69,6 @@ or
 yarn build
 ```
 
-## ESlint not doing much in VSCode?
-Add this to your `settings.json` in VSCode.
-```
-"eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-]
-```
-
 # Contributors
 
 - <strong>Owner/Maintainer</strong> - [fjlaubscher](https://github.com/fjlaubscher)
@@ -91,7 +80,3 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the code of conduc
 # License
 
 Helix is free software, and may be redistributed under the terms specified in the [LICENSE](LICENSE.md) file.
-
-
-If you prefer using JavaScript / Styled Components over TypeScript / CSS modules, have a look at [Carbon](https://github.com/leadhomesa/carbon).<br />
-It is a very similar boilerplate which I've developed for our React front-ends at [Leadhome](https://leadhome.co.za).

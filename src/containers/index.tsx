@@ -1,20 +1,23 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
+import Loader from '../components/loader';
 import Layout from '../components/layout';
 
 // containers
-import Home from './home';
-import Health from './health';
-import NotFound from './not-found';
+const Home = lazy(() => import('./home'));
+const Health = lazy(() => import('./health'));
+const NotFound = lazy(() => import('./not-found'));
 
 const App = () => (
   <Layout>
-    <Switch>
-      <Route from="/" component={Home} exact />
-      <Route from="/health" component={Health} exact />
-      <Route component={NotFound} />
-    </Switch>
+    <Suspense fallback={<Loader />}>
+      <Switch>
+        <Route from="/" component={Home} exact />
+        <Route from="/health" component={Health} exact />
+        <Route component={NotFound} />
+      </Switch>
+    </Suspense>
   </Layout>
 );
 

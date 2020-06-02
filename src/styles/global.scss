@@ -1,0 +1,22 @@
+@use "./colors.scss" as colors;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: white;
+  color: colors.$mineshaft;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: colors.$mineshaft;
+    color: colors.$alabaster;
+  }
+}
+
+svg {
+  fill: currentColor;
+}

@@ -1,0 +1,84 @@
+@use "../../styles/colors" as colors;
+@use "../../styles/breakpoints" as breakpoints;
+
+.heading {
+  color: colors.$primary;
+  font-weight: normal;
+  margin: 1rem 0;
+
+  @media (min-width: breakpoints.$tablet) {
+    margin-top: 0;
+  }
+}
+
+.column {
+  margin-bottom: 2rem;
+
+  @media (min-width: breakpoints.$tablet) {
+    justify-self: center;
+  }
+}
+
+.text {
+  margin: 0;
+}
+
+.features {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.code {
+  background-color: colors.$primary-light;
+  color: colors.$primary;
+  padding: 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: colors.$tundora;
+  }
+}
+
+.keyword {
+  color: colors.$primary;
+}
+
+.loader {
+  height: 200px;
+  color: colors.$primary-light;
+  animation: none;
+  transform: rotate(45deg);
+
+  @media (min-width: breakpoints.$tablet) {
+    height: 350px;
+  }
+}
+
+.info {
+  margin-bottom: 3rem;
+}
+
+.grid {
+  display: none;
+
+  @media (min-width: breakpoints.$tablet) {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    justify-content: center;
+    background-color: colors.$alabaster;
+    padding: 1rem;
+    margin: 3rem 0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: colors.$tundora;
+    color: colors.$alabaster;
+  }
+}

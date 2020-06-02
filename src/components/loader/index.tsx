@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 import { ReactComponent as Logo } from '../nav/logo.svg';
 
-import styles from './styles.css';
+import styles from './styles.scss';
 
 interface Props {
   className?: string;
