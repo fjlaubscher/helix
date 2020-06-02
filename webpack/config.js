@@ -74,7 +74,7 @@ module.exports = {
       filename: '[name].css',
       chunkFilename: '[id].css',
     }),
-    new CopyWebpackPlugin([{ from: assetsPath, to: buildPath }]),
+    new CopyWebpackPlugin({ patterns: [{ from: assetsPath, to: buildPath }] }),
     new HtmlWebPackPlugin({
       template: './src/index.html',
       publicPath,
