@@ -26,6 +26,19 @@ Don&apos;t like SCSS and want something else?
 <strong>You can change it.</strong>
 
 # Getting Started
+
+## TLDR;
+
+```
+npx degit fjlaubscher/helix my-app
+cd my-app
+cp sample.env .env
+npm install
+npm start
+```
+
+Alternatively you could clone this repo or click the "Use this template" button on github.
+
 ## Config
 Copy the sample `.env` file and create a `.env` of your own.
 ```
@@ -44,29 +57,17 @@ If you don't want any of these features, simply exclude them from your `.env` fi
 ```
 npm install
 ```
-or
-```
-yarn install
-```
 
 ## Development
 This command starts up the `webpack-dev-server` and by default runs at `http://localhost:3000`.
 ```
 npm start
 ```
-or
-```
-yarn start
-```
 
 ## Production
 Preferably set `NODE_ENV` to `production` here if you're building for production. <br />
 ```
 npm run build
-```
-or
-```
-yarn build
 ```
 
 # Contributors
