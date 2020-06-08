@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/containers/not-found/styles.scss"],"names":[],"mappings":"AAAA,yBAAyB,aAAa,sBAAsB,mBAAmB,4BAA4B,cAAc,sBAAsB,a","file":"2.css","sourcesContent":[".styles__notFound--1cIUS{display:flex;flex-direction:column;align-items:center}.styles__notFound--1cIUS h1{color:#f28a30}.styles__image--3eVGa{height:300px}"],"sourceRoot":""}
