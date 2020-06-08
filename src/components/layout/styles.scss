@@ -1,9 +1,11 @@
+@use "../../styles/breakpoints";
+
 .container {
-  max-width: 1280px;
+  max-width: breakpoints.$desktop;
   margin: 0 auto;
   padding: 0 1rem;
 
-  @media (min-width: 1280px) {
+  @media (min-width: breakpoints.$desktop) {
     padding: 0;
   }
 }

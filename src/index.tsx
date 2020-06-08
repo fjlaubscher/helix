@@ -28,8 +28,9 @@ const renderApp = (TheApp: React.FC) => {
 
 if (module.hot) {
   module.hot.accept(() => {
-    const NewApp = require('./containers').default;
-    renderApp(NewApp);
+    import('./containers')
+      .then((mod) => renderApp(mod.default))
+      .catch((ex) => console.error(ex));
   });
 }
 

@@ -1,5 +1,5 @@
-@use "../../styles/colors" as colors;
-@use "../../styles/breakpoints" as breakpoints;
+@use "../../styles/colors";
+@use "../../styles/breakpoints";
 
 .heading {
   color: colors.$primary;
@@ -53,16 +53,17 @@
 .loader {
   height: 200px;
   color: colors.$primary-light;
-  animation: none;
-  transform: rotate(45deg);
+  align-self: center;
+  margin-top: 4rem;
 
-  @media (min-width: breakpoints.$tablet) {
-    height: 350px;
+  @media (prefers-color-scheme: dark) {
+    color: colors.$primary;
   }
 }
 
 .info {
-  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .grid {

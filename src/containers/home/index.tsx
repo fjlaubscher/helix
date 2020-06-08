@@ -47,7 +47,7 @@ const Home = () => (
             <span role="img" aria-label="css modules">
               📚
             </span>
-            CSS Modules
+            SCSS
           </li>
           <li>
             <span role="img" aria-label="pwa">
@@ -70,7 +70,7 @@ const Home = () => (
           providing a simple and clean foundation.
           <br />
           <br />
-          Don&apos;t like CSS modules and want something else?
+          Don&apos;t like SCSS and want something else?
           <br />
           <strong>You can change it.</strong>
         </p>
@@ -79,15 +79,15 @@ const Home = () => (
     <div className={styles.info}>
       <h1>
         Get started by editing{' '}
-        <code className={styles.code}>src/containers/home/home.tsx</code>
+        <code className={styles.code}>src/containers/home/index.tsx</code>
       </h1>
       <h2>
         To see how code splitting is done with{' '}
         <code className={styles.code}>React.lazy</code> go look at{' '}
-        <code className={styles.code}>src/containers/home/index.tsx</code>
+        <code className={styles.code}>src/containers/index.tsx</code>
       </h2>
+      <Loader className={styles.loader} />
     </div>
-    <Loader className={styles.loader} />
   </>
 );
 

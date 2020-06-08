@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Loader from '../components/loader';
 import Layout from '../components/layout';
 
-// containers
+// lazy loaded containers
 const Home = lazy(() => import('./home'));
 const Health = lazy(() => import('./health'));
 const NotFound = lazy(() => import('./not-found'));

@@ -8,7 +8,8 @@
     "prebuild": "npm run clean",
     "build": "webpack --mode production --config webpack/config.js",
     "clean": "rimraf build",
-    "lint": "eslint src --ext .tsx,.ts"
+    "lint": "eslint src --ext .tsx,.ts",
+    "typecheck": "tsc"
   },
   "repository": {
     "type": "git",
