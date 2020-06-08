@@ -34,6 +34,6 @@ declare namespace NodeJS {
     readonly NODE_ENV: 'development' | 'production';
     readonly PUBLIC_URL: string;
     readonly VERSION: string;
-    readonly PORT: number;
+    readonly PORT: string;
   }
 }
