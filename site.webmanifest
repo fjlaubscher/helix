@@ -15,5 +15,6 @@
   ],
   "theme_color": "#f28a30",
   "background_color": "#f28a30",
+  "start_url": "/",
   "display": "standalone"
 }
