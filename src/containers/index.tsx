@@ -13,8 +13,8 @@ const App = () => (
   <Layout>
     <Suspense fallback={<Loader />}>
       <Switch>
-        <Route from="/" component={Home} exact />
-        <Route from="/health" component={Health} exact />
+        <Route path="/" component={Home} exact />
+        <Route path="/health" component={Health} exact />
         <Route component={NotFound} />
       </Switch>
     </Suspense>
