@@ -1,23 +1,30 @@
 {
   "parser": "@typescript-eslint/parser",
   "env": {
-    "browser": true,
-    "node": true
+    browser: true,
+    commonjs: true,
+    es6: true,
+    node: true,
   },
-  "extends": [
-    "plugin:@typescript-eslint/recommended",
-    "plugin:jsx-a11y/recommended",
-    "plugin:react/recommended"
-  ],
   "plugins": [
-    "@typescript-eslint/eslint-plugin",
+    "@typescript-eslint",
     "prettier",
     "react",
+    "react-hooks",
     "jsx-a11y"
+  ],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": 2018,
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      jsx: true,
+    }
   },
   "rules": {
     "@typescript-eslint/indent": "off",
