@@ -7,7 +7,7 @@
 ## What does it do?
 
 - ⚙️ Minimal and accessible config
-- ♻️ HMR (Hot Module Replacement) with Webpack 4
+- ♻️ React Refresh (HMR)
 - 🤸‍ Code Splitting with `React.lazy`
 - 👨‍💻️ TypeScript
 - 📚 SCSS

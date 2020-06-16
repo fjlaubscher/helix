@@ -1,5 +1,5 @@
-@use "../../styles/colors";
-@use "../../styles/breakpoints";
+@use "../../styles/_colors";
+@use "../../styles/_breakpoints";
 
 .heading {
   color: colors.$primary;

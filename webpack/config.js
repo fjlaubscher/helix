@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 require('dotenv').config();
 
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const autoprefixer = require('autoprefixer');
 const Dotenv = require('dotenv-webpack');
 const path = require('path');
 
@@ -20,25 +20,35 @@ module.exports = {
   entry: './src/index.tsx',
   output: {
     path: buildPath,
-    filename: '[name].bundle.js',
+    filename: '[name].bundle.js'
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
+    extensions: ['.ts', '.tsx', '.js']
   },
   module: {
     rules: [
       {
-        test: /.(js|ts|tsx)$/,
+        test: /\.[jt]sx?$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              // DO NOT apply the Babel plugin in production mode!
+              plugins: [
+                !isProduction && require.resolve('react-refresh/babel')
+              ].filter(Boolean)
+            }
+          }
+        ]
       },
       {
         test: /\.(png|jpg|gif)$/,
-        use: ['file-loader'],
+        use: ['file-loader']
       },
       {
         test: /\.svg$/,
-        use: ['@svgr/webpack', 'file-loader'],
+        use: ['@svgr/webpack', 'file-loader']
       },
       {
         test: /\.scss$/,
@@ -50,40 +60,34 @@ module.exports = {
             options: {
               importLoaders: 1,
               modules: {
-                localIdentName: '[name]__[local]--[hash:base64:5]',
-              },
-            },
+                localIdentName: '[name]__[local]--[hash:base64:5]'
+              }
+            }
           },
           {
-            loader: 'postcss-loader',
-            options: {
-              ident: 'postcss',
-              plugins: () => [autoprefixer()],
-            },
-          },
-          {
-            loader: 'sass-loader',
-          },
-        ],
-      },
-    ],
+            loader: 'sass-loader'
+          }
+        ]
+      }
+    ]
   },
   plugins: [
     new Dotenv(),
     new MiniCssExtractPlugin({
       filename: '[name].css',
-      chunkFilename: '[id].css',
+      chunkFilename: '[id].css'
     }),
     new CopyWebpackPlugin({ patterns: [{ from: assetsPath, to: buildPath }] }),
     new HtmlWebPackPlugin({
       template: './src/index.html',
-      publicPath,
+      publicPath
     }),
-    isProduction &&
-      new WorkboxPlugin.GenerateSW({
-        swDest: 'sw.js',
-        clientsClaim: true,
-        skipWaiting: true,
-      }),
-  ].filter((p) => p !== false),
+    isProduction
+      ? new WorkboxPlugin.GenerateSW({
+          swDest: 'sw.js',
+          clientsClaim: true,
+          skipWaiting: true
+        })
+      : new ReactRefreshWebpackPlugin()
+  ]
 };

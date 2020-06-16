@@ -29,7 +29,7 @@ const Home = () => (
             <span role="img" aria-label="hmr">
               ♻️
             </span>
-            HMR (Hot Module Replacement)
+            React Refresh (HMR)
           </li>
           <li>
             <span role="img" aria-label="code splitting">

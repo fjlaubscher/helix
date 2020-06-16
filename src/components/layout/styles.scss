@@ -1,4 +1,4 @@
-@use "../../styles/breakpoints";
+@use "../../styles/_breakpoints";
 
 .container {
   max-width: breakpoints.$desktop;
