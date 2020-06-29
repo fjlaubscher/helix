@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { render, hydrate } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
 // global styles
@@ -13,17 +13,15 @@ const supportsHistory = 'pushState' in window.history;
 const rootElement = document.getElementById('root');
 
 const renderApp = (TheApp: React.FC) => {
-  if (rootElement) {
-    const HelixApp = (
-      <BrowserRouter basename={publicUrl} forceRefresh={!supportsHistory}>
-        <TheApp />
-      </BrowserRouter>
-    );
+  const HelixApp = (
+    <BrowserRouter basename={publicUrl} forceRefresh={!supportsHistory}>
+      <TheApp />
+    </BrowserRouter>
+  );
 
-    return render(HelixApp, rootElement);
-  }
-
-  return null;
+  return rootElement?.hasChildNodes()
+    ? hydrate(HelixApp, rootElement)
+    : render(HelixApp, rootElement);
 };
 
 if (module.hot) {
