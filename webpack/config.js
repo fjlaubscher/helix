@@ -58,14 +58,17 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1,
               modules: {
                 localIdentName: '[name]__[local]--[hash]'
-              }
+              },
+              sourceMap: !isProduction
             }
           },
           {
-            loader: 'sass-loader'
+            loader: 'sass-loader',
+            options: {
+              sourceMap: !isProduction
+            }
           }
         ]
       }
