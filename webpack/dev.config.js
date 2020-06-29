@@ -10,6 +10,7 @@ module.exports = Object.assign(
     devServer: {
       stats: 'minimal',
       hot: true,
+      host: '0.0.0.0',
       port,
       proxy: {
         '/api': {
