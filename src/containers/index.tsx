@@ -10,15 +10,15 @@ const Health = lazy(() => import('./health'));
 const NotFound = lazy(() => import('./not-found'));
 
 const App = () => (
-  <Layout>
-    <Suspense fallback={<Loader />}>
+  <Suspense fallback={<Loader />}>
+    <Layout>
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/health" component={Health} exact />
         <Route component={NotFound} />
       </Switch>
-    </Suspense>
-  </Layout>
+    </Layout>
+  </Suspense>
 );
 
 export default App;
