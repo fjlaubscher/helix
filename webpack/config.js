@@ -35,20 +35,22 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               // DO NOT apply the Babel plugin in production mode!
-              plugins: [
-                !isProduction && require.resolve('react-refresh/babel')
-              ].filter(Boolean)
+              plugins: [!isProduction && require.resolve('react-refresh/babel')].filter(Boolean)
             }
           }
         ]
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(jpg|png|gif|jpeg|woff|woff2|eot|ttf)$/,
         use: ['file-loader']
       },
       {
         test: /\.svg$/,
         use: ['@svgr/webpack', 'file-loader']
+      },
+      {
+        test: /\.css$/,
+        use: [isProduction ? MiniCssExtractPlugin.loader : 'style-loader', 'css-loader']
       },
       {
         test: /\.scss$/,
