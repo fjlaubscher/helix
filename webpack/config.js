@@ -20,6 +20,7 @@ module.exports = {
   entry: './src/index.tsx',
   output: {
     path: buildPath,
+    publicPath,
     filename: '[name].bundle.js'
   },
   resolve: {

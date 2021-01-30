@@ -18,6 +18,7 @@
     "module": "ESNext"
   },
   "include": [
-    "src"
+    "src",
+    "types"
   ]
 }

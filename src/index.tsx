@@ -26,9 +26,7 @@ const renderApp = (TheApp: React.FC) => {
 
 if (module.hot) {
   module.hot.accept(() => {
-    import('./containers')
-      .then((mod) => renderApp(mod.default))
-      .catch((ex) => console.error(ex));
+    import('./containers').then((mod) => renderApp(mod.default)).catch((ex) => console.error(ex));
   });
 }
 
@@ -37,6 +35,13 @@ renderApp(App);
 // service worker bit
 if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js');
+    navigator.serviceWorker.register('sw.js').then(() =>
+      caches.keys().then((cacheNames) => {
+        // delete all caches
+        cacheNames.forEach((cacheName) => {
+          caches.delete(cacheName);
+        });
+      })
+    );
   });
 }
