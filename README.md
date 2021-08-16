@@ -1,3 +1,7 @@
+# NOTE: Project is archived.
+
+I've jumped ship and started using [snowpack](https://snowpack.dev) which solves the same problem and is much simpler to use.
+
 ![Imgur](https://i.imgur.com/5FJS5G0.png)
 
 ## What is Helix?
